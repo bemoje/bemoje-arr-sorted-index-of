@@ -1,6 +1,6 @@
 {
    "name": "@bemoje/arr-sorted-index-of",
-   "version": "1.0.0",
+   "version": "1.0.1",
    "description": "Binary search  -based indexOf for sorted arrays.",
    "main": "dist/arr-sorted-index-of.umd.js",
    "module": "dist/arr-sorted-index-of.esm.js",
@@ -104,9 +104,17 @@
       "found",
       "elements",
       "position",
+      "comparator",
+      "function",
       "callback",
-      "type",
       "definition",
+      "compare",
+      "negative",
+      "number",
+      ">",
+      "positive",
+      "<",
+      "type",
       "getter",
       "arrsortedindexof"
    ]

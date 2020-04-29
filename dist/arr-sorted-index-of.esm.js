@@ -6,7 +6,7 @@ import assertType from '@bemoje/assert-type';
  * Binary search  -based indexOf for sorted arrays.
  * @param {Array} arr - The array to search
  * @param {*} element - The element to find
- * @param {function|object} [compare]
+ * @param {comparator|object} [compare]
  * @param {boolean} [compare.numeric=false] - Sort numerically. Defaults to lexicographic/alphabetic sort.
  * @param {boolean} [compare.descending=false] - Sort in descending order. Defaults to ascending order.
  * @param {boolean} [compare.array=false] - Sort arrays. Nested arrays are also compared recursively.
@@ -23,8 +23,6 @@ function arrSortedIndexOf(arr, element, compare) {
 	if (len === 0) {
 		return -1
 	}
-
-	assertArgs(element);
 
 	// handle comparator
 	if (compare) {
@@ -67,6 +65,14 @@ function arrSortedIndexOf(arr, element, compare) {
 	// not found
 	return -1
 }
+
+/**
+ * Comparator function callback definition.
+ * @callback comparator
+ * @param {*} a - The first value to compare
+ * @param {*} b - The second value to compare
+ * @returns {number} A negative number if a > b, a positive number if a < b, 0 otherwise.
+ */
 
 /**
  * Callback type definition.

@@ -3,7 +3,7 @@
 <head>
   <meta charset='utf-8'>
   <title>@bemoje/arr-sorted-index-of 1.0.0 | Documentation</title>
-  <meta name='description' content='Node library template package with full ESM support. All features available as npm scripts: Jest testing. Rollup build. Rename package - affecting all relevant files. Readme generator. Markdown and HTML API-documentation. Npm publish and version bumping. Github repository create, delete and commit. Jsdoc block comment description triggers package description updates. Package keyword-extraction from block comments in source code.'>
+  <meta name='description' content='Binary search  -based indexOf for sorted arrays.'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
   <link href='assets/style.css' rel='stylesheet'>
@@ -29,6 +29,16 @@
                   href='#arrsortedindexof'
                   class="">
                   arrSortedIndexOf
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#comparator'
+                  class="">
+                  comparator
                   
                 </a>
                 
@@ -69,7 +79,7 @@
 
   <p>Binary search  -based indexOf for sorted arrays.</p>
 
-    <div class='pre p1 fill-light mt0'>arrSortedIndexOf(arr: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, element: any, compare: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+    <div class='pre p1 fill-light mt0'>arrSortedIndexOf(arr: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, element: any, compare: (<a href="#comparator">comparator</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)?): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
   
   
 
@@ -104,7 +114,7 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>compare</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">function</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)?)</code>
+            <span class='code bold'>compare</span> <code class='quiet'>((<a href="#comparator">comparator</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)?)</code>
 	    
           </div>
           
@@ -180,6 +190,90 @@
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
         Returns -1 if not found, if found, returns the elements index position.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='comparator'>
+      comparator
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Comparator function callback definition.</p>
+
+    <div class='pre p1 fill-light mt0'>comparator(a: any, b: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>a</span> <code class='quiet'>(any)</code>
+	    The first value to compare
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>b</span> <code class='quiet'>(any)</code>
+	    The second value to compare
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        A negative number if a > b, a positive number if a &#x3C; b, 0 otherwise.
 
       
     

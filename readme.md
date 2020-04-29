@@ -145,9 +145,13 @@ npm run test
 
     -   [Parameters][2]
 
--   [getter][3]
+-   [comparator][3]
 
     -   [Parameters][4]
+
+-   [getter][5]
+
+    -   [Parameters][6]
 
 ## arrSortedIndexOf
 
@@ -155,27 +159,41 @@ Binary search  -based indexOf for sorted arrays.
 
 ##### Parameters
 
--   `arr` **[Array][5]** The array to search
+-   `arr` **[Array][7]** The array to search
 
 -   `element` **any** The element to find
 
--   `compare` **([function][6] \| [object][7])?** 
+-   `compare` **([comparator][8] \| [object][9])?** 
 
-    -   `compare.numeric` **[boolean][8]** Sort numerically. Defaults to lexicographic/alphabetic sort. (optional, default `false`)
+    -   `compare.numeric` **[boolean][10]** Sort numerically. Defaults to lexicographic/alphabetic sort. (optional, default `false`)
 
-    -   `compare.descending` **[boolean][8]** Sort in descending order. Defaults to ascending order. (optional, default `false`)
+    -   `compare.descending` **[boolean][10]** Sort in descending order. Defaults to ascending order. (optional, default `false`)
 
-    -   `compare.array` **[boolean][8]** Sort arrays. Nested arrays are also compared recursively. (optional, default `false`)
+    -   `compare.array` **[boolean][10]** Sort arrays. Nested arrays are also compared recursively. (optional, default `false`)
 
-    -   `compare.by` **([number][9] \| [string][10] \| [getter][11])** Sort by either array index, a callback(element): any - or by object keys with dot-notation support. (optional, default `undefined`)
+    -   `compare.by` **([number][11] \| [string][12] \| [getter][13])** Sort by either array index, a callback(element): any - or by object keys with dot-notation support. (optional, default `undefined`)
 
-Returns **[number][9]** Returns -1 if not found, if found, returns the elements index position.
+Returns **[number][11]** Returns -1 if not found, if found, returns the elements index position.
+
+## comparator
+
+Comparator function callback definition.
+
+Type: [Function][14]
+
+##### Parameters
+
+-   `a` **any** The first value to compare
+
+-   `b` **any** The second value to compare
+
+Returns **[number][11]** A negative number if a > b, a positive number if a &lt; b, 0 otherwise.
 
 ## getter
 
 Callback type definition.
 
-Type: [Function][6]
+Type: [Function][14]
 
 ##### Parameters
 
@@ -187,20 +205,26 @@ Returns **any** The value to be compared
 
 [2]: #parameters
 
-[3]: #getter
+[3]: #comparator
 
 [4]: #parameters-1
 
-[5]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[5]: #getter
 
-[6]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
+[6]: #parameters-2
 
-[7]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[7]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-[8]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[8]: #comparator
 
-[9]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[9]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
 
-[10]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[10]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 
-[11]: #getter
+[11]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[12]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[13]: #getter
+
+[14]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
