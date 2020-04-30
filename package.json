@@ -1,6 +1,6 @@
 {
    "name": "@bemoje/arr-sorted-index-of",
-   "version": "1.0.1",
+   "version": "1.0.2",
    "description": "Binary search  -based indexOf for sorted arrays.",
    "main": "dist/arr-sorted-index-of.umd.js",
    "module": "dist/arr-sorted-index-of.esm.js",
@@ -52,7 +52,7 @@
    },
    "devDependencies": {
       "babel-core": "^6.26.3",
-      "babel-jest": "^25.4.0",
+      "babel-jest": "^25.5.1",
       "babel-preset-env": "^1.7.0",
       "documentation": "^12.3.0",
       "esm": "^3.2.25",
